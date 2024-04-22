@@ -48,9 +48,9 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <strong>Company Name</strong>
-                            <input type="text" name='name' class="form-control" placeholder="Company Name">
-                            @error('name')
+                            <strong>Company Address</strong>
+                            <input type="text" name='address' class="form-control" placeholder="Company address">
+                            @error('address')
                                 <div class="alert alert-danger">
                                     {{$message}}
                                 </div>
