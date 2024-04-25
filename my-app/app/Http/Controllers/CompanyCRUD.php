@@ -57,4 +57,13 @@ class CompanyCRUD extends Controller
         $company->delete();
         return redirect()->route('companies.index')->with('success', 'Delete Success');
     }
+
+    public function search(Request $request){
+
+        $search = $request->input('search');
+
+        $companies = Company::where('name','Like','%'.$search.'%')->get();
+
+        return view('companies.index', compact('companies'));
+    }
 }

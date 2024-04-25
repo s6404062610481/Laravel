@@ -13,15 +13,7 @@
             <div class="col-lg-12 text-center">
                 <h2>PHP Laravel CRUD</h2>
             </div>
-            <div>
-                <a href="{{ route('companies.create') }}" class="btn btn-success">Create Company</a>
-            </div>
-            @if($message = Session::get('success'))
-            <div class="alert alert-success">
-                <p>{{ $message }}</p>
-            </div>
-            @endif
-            <form action="search" method="GET">
+            <form action="" method="GET">
                 <input type="text" name="search" placeholder="Search">
                 <button type="submit">Search</button>
             </form>
@@ -51,7 +43,7 @@
                     </tr>
                 @endforeach
             </table>
-
+            {!! $companies->links('pagination::bootstrap-5') !!}
         </div>
     </div>
 </body>
