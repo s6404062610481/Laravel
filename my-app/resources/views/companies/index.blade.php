@@ -21,6 +21,7 @@
                 <p>{{ $message }}</p>
             </div>
             @endif
+            <input type="text" class="" placeholder="Search">
 
             <table class="table table-bordered">
                 <tr>
